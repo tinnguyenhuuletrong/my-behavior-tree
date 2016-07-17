@@ -1,0 +1,23 @@
+{
+  "name": "my-behavior-tree",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinnguyenhuuletrong/my-behavior-tree.git"
+  },
+  "author": "Tin Nguyen <tin.nguyen@joy-entertainment.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tinnguyenhuuletrong/my-behavior-tree/issues"
+  },
+  "homepage": "https://github.com/tinnguyenhuuletrong/my-behavior-tree#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
