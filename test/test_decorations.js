@@ -7,6 +7,7 @@ var Decorations = behavior.Decorations
 
 var BasicAction = Actions.BasicAction
 var Condition = Decorations.Condition
+var Timer = Decorations.Timer
 
 var BehaviorComponent = Utils.BehaviorComponent
 const EBehaviorReturnCode = Utils.EBehaviorReturnCode
@@ -49,6 +50,36 @@ describe('+ decorations', function() {
 			assert.equal(ins.ReturnCode, EBehaviorReturnCode.Success)
 			assert.equal(scope.hit, true)
 			assert.equal(scope.waiting, 0)
+		});
+	});
+
+	describe('- timer. executes the behavior after a given amount of time in miliseconds has passed', function() {
+		it('waiting 5 cycles and run', function() {
+			var timer = new Timer(5)
+			var printAction = new BasicAction()
+			var scope = {
+				hit: false,
+				cycles: 0
+			}
+
+			//Set hit action
+			printAction.setAction((dt, scope) => {
+				scope.hit = true
+			})
+
+			//link action and timer node
+			timer.add(printAction)
+
+			var ins = new behavior.Behavior(timer)
+
+			while (!scope.hit) {
+				ins.behave(1, scope)
+				scope.cycles++;
+			}
+
+			assert.equal(ins.ReturnCode, EBehaviorReturnCode.Success)
+			assert.equal(scope.hit, true)
+			assert.equal(scope.cycles, 5)
 		});
 	});
 });
