@@ -74,7 +74,6 @@ describe('+ composites', function() {
 			var res = ins.behave(1)
 
 			assert.equal(res, EBehaviorReturnCode.Success)
-			console.log("\trandomValue: ", selected)
 			assert.notEqual(selected, -1)
 		});
 	});
@@ -146,7 +145,6 @@ describe('+ composites', function() {
 			res = ins.behave(1)
 			assert.equal(res, EBehaviorReturnCode.Success)
 
-			console.log("\tvalue: ", selected)
 			assert.equal(selected, 2)
 		});
 
@@ -264,7 +262,6 @@ describe('+ composites', function() {
 			res = ins.behave(1)
 			cycle++;
 			assert.equal(res, EBehaviorReturnCode.Success)
-			console.log("\t" + selected);
 			assert.equal(selected, "102021")
 		});
 
@@ -327,7 +324,6 @@ describe('+ composites', function() {
 			res = ins.behave(1)
 			assert.equal(res, EBehaviorReturnCode.Success)
 
-			console.log("\tvalue: ", selected)
 			assert.equal(selected, 2)
 		});
 
@@ -356,7 +352,6 @@ describe('+ composites', function() {
 			res = ins.behave(1)
 			assert.equal(res, EBehaviorReturnCode.Failure)
 
-			console.log("\tvalue: ", selected)
 			assert.equal(selected, 1)
 		});
 
@@ -385,7 +380,6 @@ describe('+ composites', function() {
 			res = ins.behave(1)
 			assert.equal(res, EBehaviorReturnCode.Running)
 
-			console.log("\tvalue: ", selected)
 			assert.equal(selected, 2)
 		});
 	});
@@ -417,7 +411,6 @@ describe('+ composites', function() {
 			cycle++;
 			assert.equal(res, EBehaviorReturnCode.Success)
 
-			console.log("\tvalue: ", selected)
 			assert.equal(selected, 2)
 			assert.equal(cycle, 1)
 		});
@@ -457,7 +450,6 @@ describe('+ composites', function() {
 			res = ins.behave(1)
 			cycle++;
 			assert.equal(res, EBehaviorReturnCode.Success)
-			console.log("\t" + selected)
 			assert.equal(selected, "102021")
 
 		});
@@ -508,7 +500,6 @@ describe('+ composites', function() {
 			res = ins.behave(1)
 			cycle++;
 			assert.equal(res, EBehaviorReturnCode.Success)
-			console.log("\t" + selected)
 			assert.equal(selected, "1020112122")
 		});
 	});
