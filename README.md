@@ -1,5 +1,7 @@
 # my-behavior-tree
 
+[![Code Climate](https://codeclimate.com/github/tinnguyenhuuletrong/my-behavior-tree/badges/gpa.svg)](https://codeclimate.com/github/tinnguyenhuuletrong/my-behavior-tree)
+
 Porting from C# version 
 
 Old Link:
